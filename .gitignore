@@ -4,7 +4,7 @@ bin/**/*.pyc
 bin/**/__pycache__/
 
 config/VScode/extensions/*
-
+config/JetBrain/idea/*
 binx/*
 re/*
 utils/*

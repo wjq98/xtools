@@ -2133,6 +2133,17 @@ else {
     return
 }
 
+::pyc::
+WinClose, @Auto_Activate@
+if WinExist("ahk_exe pycharm64.exe") {
+    WinActivate, ahk_exe pycharm.exe
+    return
+}
+else {
+    Run, %SCOOP_ROOT%\apps\pycharm-professional\current\IDE\bin\pycharm64.exe
+    return
+}
+
 ::cl::
 WinClose, @Auto_Activate@
 if WinExist("ahk_exe clion64.exe") {
@@ -2353,6 +2364,11 @@ return
 ::bs::
 WinClose, @Auto_Activate@
 Run, %java17w% --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -jar %A_ScriptDir%\..\..\re\burp.jar
+return
+
+::bsm::
+WinClose, @Auto_Activate@
+Run, %java17w% --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -Dsun.java2d.uiScale=1 -noverify -javaagent:%A_ScriptDir%\..\..\re\burp_pro\burploader.jar -jar %A_ScriptDir%\..\..\re\burp_pro\burpsuite_pro_v2022.2.4.jar
 return
 
 ::gd::
