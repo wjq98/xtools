@@ -1470,6 +1470,11 @@ WinClose, @Auto_Activate@
 RunWait, wsl.exe --set-default ubuntu_2, , Hide
 return
 
+::ub3::
+WinClose, @Auto_Activate@
+RunWait, wsl.exe --set-default ubuntu_3, , Hide
+return
+
 ::ka::
 WinClose, @Auto_Activate@
 RunWait, wsl.exe --set-default kali-linux, , Hide
